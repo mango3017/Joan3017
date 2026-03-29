@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check E-Plastic Recyclability</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>E-Plastic Management Data Mining</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </nav>
+        <div id="auth-links">
+            <a href="/signup" class="cta-btn">Sign Up</a>
+            <a href="/login" class="cta-btn">Login</a>
+        </div>
+        <span id="welcome-user" style="margin-left:1rem;"></span>
+        <button id="logout-btn" style="display:none; margin-left:1rem;">Logout</button>
+    </header>
+    <main>
+        <section id="recycle-check-section">
+            <h2>Check E-Plastic Recyclability</h2>
+            <form id="recycle-form">
+                <label for="waste-select">Select E-Plastic Waste Item:</label>
+                <select id="waste-select" name="waste-select" required>
+                    <option value="">-- Choose an item --</option>
+                    <optgroup label="Recyclable Items">
+                        <option value="PET bottle">PET Bottle</option>
+                        <option value="HDPE container">HDPE Container (Milk Jug)</option>
+                        <option value="PP bottle cap">PP Bottle Cap</option>
+                        <option value="PP straw">PP Straw</option>
+                        <option value="ABS phone case">ABS Phone Case</option>
+                        <option value="ABS keyboard">ABS Keyboard</option>
+                        <option value="Polycarbonate CD case">Polycarbonate CD Case</option>
+                        <option value="Polycarbonate laptop screen">Polycarbonate Laptop Screen</option>
+                        <option value="Electronics casing">Electronics Casing</option>
+                        <option value="Computer monitor casing">Computer Monitor Casing</option>
+                        <option value="Printer casing">Printer Casing</option>
+                        <option value="Router casing">Router Casing</option>
+                        <option value="Charger case">Charger Case</option>
+                        <option value="Cable insulation">Cable Insulation</option>
+                        <option value="Wire coating">Wire Coating</option>
+                        <option value="Laptop casing">Laptop Casing</option>
+                        <option value="Mouse casing">Mouse Casing</option>
+                        <option value="Hard drive casing">Hard Drive Casing</option>
+                        <option value="Circuit board plastic">Circuit Board Plastic Parts</option>
+                        <option value="USB drive casing">USB Drive Casing</option>
+                    </optgroup>
+                    <optgroup label="Non-Recyclable Items">
+                        <option value="PVC pipe">PVC Pipe</option>
+                        <option value="PVC cable insulation">PVC Cable Insulation</option>
+                        <option value="Polystyrene foam">Polystyrene Foam</option>
+                        <option value="Polystyrene packaging">Polystyrene Packaging</option>
+                        <option value="Mixed plastic blend">Mixed Plastic Blend</option>
+                        <option value="Flame-retardant plastic">Flame-Retardant Plastic</option>
+                        <option value="Plastic with metal inserts">Plastic with Metal Inserts</option>
+                        <option value="Contaminated plastic">Contaminated Plastic</option>
+                        <option value="Thermoset plastic">Thermoset Plastic</option>
+                        <option value="Brominated plastic">Brominated Plastic</option>
+                        <option value="Epoxy resin">Epoxy Resin</option>
+                        <option value="Phenolic plastic">Phenolic Plastic</option>
+                    </optgroup>
+                </select>
+                <button type="submit">Check</button>
+            </form>
+            <div id="recycle-result" style="margin-top:1rem;"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 E-Plastic Management</p>
+    </footer>
+    <script src="{{ url_for('static', filename='recycle.js') }}"></script>
+</body>
+</html>

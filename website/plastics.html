@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Plastics & E-Plastic Waste</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <a href="/" style="text-decoration:none;"><h1 style="display:inline;color:#2e86c1;">E-Plastic Management</h1></a>
+        <nav style="display:inline;float:right;">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/feedback">Feedback</a>
+            <a href="/plastics">Plastics Info</a>
+        </nav>
+    </header>
+    <main style="max-width:800px;margin:2rem auto;">
+        <h2 style="color:#2e86c1;">Types of Plastics</h2>
+        <ul style="line-height:1.7;">
+            <li><b>PET (Polyethylene Terephthalate):</b> Used in water bottles, food packaging. <span style="color:green;">Recyclable</span></li>
+            <li><b>HDPE (High-Density Polyethylene):</b> Used in milk jugs, detergent bottles. <span style="color:green;">Recyclable</span></li>
+            <li><b>PVC (Polyvinyl Chloride):</b> Used in pipes, cable insulation. <span style="color:orange;">Limited recycling</span></li>
+            <li><b>LDPE (Low-Density Polyethylene):</b> Used in plastic bags, some computer parts. <span style="color:orange;">Limited recycling</span></li>
+            <li><b>PP (Polypropylene):</b> Used in bottle caps, straws, electronics. <span style="color:green;">Recyclable</span></li>
+            <li><b>PS (Polystyrene):</b> Used in foam packaging, CD cases. <span style="color:red;">Not easily recyclable</span></li>
+            <li><b>Other (Polycarbonate, ABS, etc):</b> Used in electronics, laptops, phones. <span style="color:orange;">Check locally</span></li>
+        </ul>
+        <h2 style="color:#2e86c1;margin-top:2rem;">E-Plastic Waste Types</h2>
+        <label for="eplastic-type">Select an e-plastic waste item:</label>
+        <select id="eplastic-type" style="margin-left:1rem;padding:0.3rem 1rem;">
+            <option value="">-- Choose an item --</option>
+            <option value="keyboard">Keyboard</option>
+            <option value="mouse">Mouse</option>
+            <option value="monitor">Monitor</option>
+            <option value="printer">Printer</option>
+            <option value="mobile phone">Mobile Phone</option>
+            <option value="laptop shell">Laptop Shell</option>
+            <option value="motherboard">Motherboard</option>
+            <option value="plastic battery cover">Plastic Battery Cover</option>
+            <option value="router case">Router Case</option>
+            <option value="game controller">Game Controller</option>
+            <option value="scanner lid">Scanner Lid</option>
+            <option value="plastic fan blade">Plastic Fan Blade</option>
+            <option value="cd">CD</option>
+            <option value="remote">Remote</option>
+            <option value="charger">Charger</option>
+            <option value="phone case">Phone Case</option>
+            <option value="tablet screen">Tablet Screen</option>
+            <option value="earphones">Earphones</option>
+            <option value="usb cable">USB Cable</option>
+            <option value="tv remote">TV Remote</option>
+            <option value="sim card holder">SIM Card Holder</option>
+            <option value="plastic circuit board spacer">Plastic Circuit Board Spacer</option>
+        </select>
+        <div id="eplastic-info" style="margin-top:1.5rem;font-size:1.08rem;color:#333;"></div>
+    </main>
+    <script src="{{ url_for('static', filename='plastics.js') }}"></script>
+</body>
+</html>
